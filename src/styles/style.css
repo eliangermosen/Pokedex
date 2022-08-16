@@ -1,5 +1,33 @@
+/* GENERAL */
+
+:root {
+    /** COLOR PALETTE **/
+    /* --backgroung: #F8F9FA; */
+    --backgroung: rgba(248, 249, 250, 1);
+    --blue: rgba(56, 96, 170, 1);
+    --blue-light: rgba(56, 96, 170, 0.3);
+    --yellow: rgba(253, 216, 93, 1);
+    --yellow-light: rgba(253, 216, 93, 0.5);
+    --red: rgba(241, 75, 61, 1);
+    --red-light: rgba(241, 75, 61, 0.5);
+    --green: rgba(96, 211, 148, 1);
+    --green-light: rgba(96, 211, 148, 0.5);
+    --card: rgba(217, 217, 217, 0.4);
+    /* --card: #D9D9D9 */
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.inter-regular{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+.inter-bold{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
 }
