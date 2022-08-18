@@ -22,12 +22,57 @@
     box-sizing: border-box;
 }
 
-.inter-regular{
+.inter-medium{
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .inter-bold{
     font-family: 'Inter', sans-serif;
     font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container{
+    background-color: var(--backgroung);
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+/* HEADER */
+
+.content-logo img{
+    margin-top: 15px;
+    margin-left: 20px;
+    width: 220px;
+    height: auto;
+}
+
+/* HOME */
+
+h2{
+    font-size: 34px;
+}
+
+.p-welcome{
+    width: 650px;
+    margin: 26px 0;
+}
+
+.btn-home{
+    padding: 14px;
+    border: none;
+    border-radius: 30px;
+    background-color: var(--yellow);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-home span{
+    padding-right: 10px;
 }
