@@ -1,7 +1,7 @@
 import logo from "../../assets/images/logo.svg"
 
 const Header = () => (
-    <header className = "">
+    <header className = "backg-color">
         <a href="/" className="content-logo">
             <img src={logo} alt="Logo TvShow"/>
             {/* <h1 className="">Pokemon</h1> */}
