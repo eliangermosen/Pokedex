@@ -9,13 +9,14 @@ import "../styles/style.css"
 // pages and sections
 import Header from "./sections/Header";
 import Home from "./pages/Home";
+import Search from "./pages/Search";
 
 const App = () => (
   <BrowserRouter>
     <Header/>
     <Routes>
       <Route path="/" element={<Home/>}></Route>
-      {/* <Route path="/search" element={<Search/>}></Route> */}
+      <Route path="/search" element={<Search/>}></Route>
       {/* <Route path="/pokemon" element={<Pokemon/>}></Route> */}
       {/* <Route
         path="*"

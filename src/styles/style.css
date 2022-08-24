@@ -75,11 +75,18 @@ h2{
     display: flex;
     justify-content: space-around;
     align-items: center;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .btn-home span{
     padding-right: 10px;
     font-size: 16px;
+}
+
+.btn-home:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .content-home{
@@ -116,33 +123,75 @@ h2{
     padding: 0 40px;
 }
 
-/* .content-home{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 400px;
-    width: 1200px;
-    background: #000;
+/* SEARCH */
+
+.container-searchbar{
+    margin-top: 50px;
+    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* grid-template-columns: repeat(3, 1fr); */
+    grid-gap: 20px;
+    /* align-items: center;
+    justify-items: center;
+    align-self: center; */
+    place-items: center;
+}
+
+.content-searchbar{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.box1-home{
-    width: calc(50% - 50px);
-    height: 100%;
-    background: var(--backgroung);
-    box-sizing: border-box;
-    padding: 30px 50px;
+.title-search{
+    font-size: 32px;
 }
 
-margin: 0 auto;
-width: 90%;
+.search-input{
+    border-radius: 20px;
+    padding: 14px 20px;
+    border: none;
+    background-color: var(--card);
+    color: #595F65;
+    width: 400px;
+    margin-right: 14px;
+}
 
-.box2-home{
-    width: calc(50% + 50px);
-    height: 100%;
-    background: var(--blue);
-    box-sizing: border-box;
-    border-left: 100px solid var(--backgroung);
-    border-bottom: 400px solid transparent;
-} */
+.search-input::placeholder {
+    /* color: var(--blue); */
+    font-size: 15px;
+}
+
+.search-input:focus {
+    outline: 2px solid var(--blue);
+}
+
+.inline-inp-btn{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.btn-search{
+    border: none;
+    border-radius: 50%;
+    padding: 8px 10px;
+    background-color: var(--blue);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-search svg{
+    color: #fff;
+}
+
+.btn-search:hover{
+    box-shadow: var(--blue-light) 0px 8px 24px;
+}
+
+.container-pokeball img{
+    height: 200px;
+    width: auto;
+}

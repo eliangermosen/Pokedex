@@ -11,10 +11,10 @@ const home = () => (
                 card games, clothes, among others, becoming
                 a brand that is recognized in the world market.
             </p>
-            <button className="inter-bold btn-home">
+            <a className="inter-bold btn-home" href="/search">
                 <span>Catch pokemon’s</span>
                 <svg className="w-6 h-6" width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-            </button>
+            </a>
         </article>
         <article className="box2-home">
             <img src={pikachu} alt="Hi Pikachu"/>
