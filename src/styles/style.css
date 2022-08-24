@@ -250,14 +250,27 @@ h2{
     text-align: center;
 }
 
-.search-cont{
-    /* padding-left: 50px; */
-}
-
 .container-card{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
     grid-gap: 10px;
     place-items: center;
     margin: 20px 0;
+}
+
+.btns-next-prev{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 50px;
+}
+
+.btns-next-prev a{
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--blue);
+    background-color: var(--blue-light);
+    padding: 5px 10px;
 }
