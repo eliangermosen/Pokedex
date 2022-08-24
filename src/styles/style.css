@@ -249,3 +249,15 @@ h2{
     padding-bottom: 20px;
     text-align: center;
 }
+
+.search-cont{
+    /* padding-left: 50px; */
+}
+
+.container-card{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(265px, 1fr));
+    grid-gap: 10px;
+    place-items: center;
+    margin: 20px 0;
+}
