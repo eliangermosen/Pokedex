@@ -39,7 +39,8 @@ a {
 .container{
     background-color: var(--backgroung);
     display: grid;
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    min-height: 85vh;
     grid-template-rows: auto 1fr auto;
 }
 
@@ -94,8 +95,8 @@ h2{
 
 .content-home, .content-poke{
     background-color: var(--backgroung);
-    height: 100vh;
-    position: relative;
+    /* height: 100vh;
+    position: relative; */
 }
 .content-home::before, .content-poke::before{
     content: '';
@@ -302,6 +303,7 @@ h2{
 /* POKEMON */
 
 .poke-name{
+    margin-top: 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
