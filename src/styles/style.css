@@ -68,6 +68,7 @@ h2{
 }
 
 .btn-home{
+    width: 230px;
     padding: 14px;
     border: none;
     border-radius: 30px;
@@ -118,12 +119,17 @@ h2{
 .box1-poke, .box2-poke{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     justify-content: center;
 }
 
 .box1-home, .box1-poke{
     padding: 0 40px;
+}
+
+.box2-home img, .box2-poke{
+    width: 360px;
+    height: auto;
 }
 
 /* SEARCH */
@@ -299,7 +305,7 @@ h2{
 }
 
 .name-poke{
-    font-size: 32px;
+    font-size: 36px;
 }
 
 .values-rectangle, .values-circle{
@@ -352,4 +358,54 @@ h2{
 .container-circle{
     display: flex;
     justify-content: space-between;
+}
+
+.physical{
+    margin: 12px 0;
+    width: 190px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.physical h3{
+    padding-bottom: 15px;
+}
+
+.group-habilities{
+    margin: 20px 0;
+}
+
+.habilities{
+    /* padding: 10px 0; */
+    padding-top: 25px;
+    padding-bottom: 10px;
+}
+
+.habilities span:nth-of-type(1){
+    margin-right: 30px;
+}
+
+.first-row-stats{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.second-row-stats{
+    width: 250px;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center;
+    text-align: center; */
+}
+
+.power{
+    margin-top: 40px;
+}
+
+.power h4{
+    margin-top: 30px;
 }
