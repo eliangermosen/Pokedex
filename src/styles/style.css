@@ -137,14 +137,17 @@ h2{
 .container-searchbar{
     margin-top: 50px;
     margin-left: 50px;
-    display: grid;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    /* grid-template-columns: repeat(3, 1fr); */
     grid-gap: 20px;
+    place-items: center; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* grid-template-columns: repeat(3, 1fr); */
     /* align-items: center;
     justify-items: center;
     align-self: center; */
-    place-items: center;
 }
 
 .content-searchbar{
