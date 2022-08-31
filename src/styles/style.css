@@ -64,8 +64,9 @@ h2{
 }
 
 .p-welcome{
-    width: 420px;
+    width: 500px;
     margin: 26px 0;
+    font-size: 20px;
 }
 
 .btn-home{
@@ -128,7 +129,7 @@ h2{
     padding: 0 40px;
 }
 
-.box2-home img, .box2-poke{
+.box2-home img, .box2-poke img{
     width: 360px;
     height: auto;
 }
@@ -137,7 +138,7 @@ h2{
 
 .container-searchbar{
     margin-top: 50px;
-    margin-left: 50px;
+    /* margin-left: 50px; */
     /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
@@ -413,4 +414,152 @@ h2{
 
 .power h4{
     margin-top: 30px;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 992px) {
+    /* HOME */
+    .p-welcome{
+        width: 400px;
+        font-size: 18px;
+    }
+    h2{
+        font-size: 28px;
+    }
+    .btn-home{
+        width: 200px;
+    }
+    .content-home, .content-poke{
+        grid-gap: 190px;
+    }
+}
+@media screen and (max-width: 900px){
+    .container-searchbar{
+        margin: 0 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .title-search{
+        font-size: 28px;
+    }
+}
+/* si la ventana del navegador es 768px o menos se ejecutara esto */
+@media screen and (max-width: 768px) {
+    /* HOME */
+    .content-home, .content-poke{
+        grid-gap: 90px;
+    }
+    .content-home,
+    .content-poke {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    .content-home::before, .content-poke::before {
+        clip-path: polygon(0 16%, 100% 16%, 100% 81%, 0% 100%);
+    }
+    .box2-home img, .box2-poke img{
+        margin-top: 40px;
+        width: 330px;
+        height: auto;
+    }
+    /* SEARCH */
+    .container-searchbar {
+        margin: 0 30px;
+    }
+    .container-pokeball img{
+        width: 100px;
+        height: auto;
+    }
+    .search-input{
+        width: 350px;
+    }
+    .title-search {
+        text-align: center;
+    }
+}
+
+/* si la ventana del navegador es 600px o menos se ejecutara esto */
+@media screen and (max-width: 600px) {
+    /* HOME */
+    .content-logo img{
+        margin-left: 12px;
+    }
+    .content-home, .content-poke {
+        grid-gap: 104px;
+    }
+    .box2-home img, .box2-poke img{
+        width: 304px;
+        height: auto;
+    }
+    .p-welcome {
+        width: 350px;
+        font-size: 18px;
+        text-align: justify;
+    }
+    /* , .box1-poke, .box2-poke */
+    .box1-home, .box2-home{
+        align-items: center;
+    }
+    .box1-home, .box1-poke{
+        padding: 0 20px;
+    }
+    /* SEARCH */
+    .search-input{
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* HOME */
+    .content-home::before, .content-poke::before {
+        clip-path: polygon(0 16%, 100% 16%, 100% 70%, 0% 78%);
+    }
+    .box2-home img, .box2-poke img{
+        margin-top: 48px;
+    }
+    /* SEARCH */
+    .search-input {
+        width: 280px;
+    }
+    .container-pokeball{
+        display: none;
+    }
+}
+@media screen and (max-width: 400px) {
+    /* HOME */
+    .box2-home img, .box2-poke img{
+        margin-top: 40px;
+    }
+    .p-welcome {
+        width: 300px;
+        font-size: 18px;
+    }
+    .content-home::before, .content-poke::before {
+        clip-path: polygon(0 16%, 100% 16%, 100% 70%, 0% 80%);
+    }
+    /* SEARCH */
+    .search-input {
+        width: 250px;
+    }
+}
+
+@media screen and (max-width: 376px){
+    /* HOME */
+    .box2-home img, .box2-poke img{
+        width: 290px;
+        height: auto;
+    }
+    .content-home::before, .content-poke::before {
+        clip-path: polygon(0 16%, 100% 16%, 100% 80%, 0% 100%);
+    }
+}
+
+@media screen and (max-width: 360px){
+    /* HOME */
+    .content-home::before, .content-poke::before {
+        clip-path: polygon(0 16%, 100% 16%, 100% 80%, 0% 90%);
+    }
 }
