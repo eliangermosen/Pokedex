@@ -416,6 +416,44 @@ h2{
     margin-top: 30px;
 }
 
+/* FOOTER */
+
+footer{
+    background-color: var(--backgroung);
+}
+
+footer section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.content-logo-footer img{
+    height: 60px;
+    width: auto;
+}
+
+footer .social{
+    display: flex;
+    flex-direction: column;
+}
+
+.links img{
+    height: 30px;
+    width: auto;
+}
+
+.links{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.connect{
+    font-size: 22px;
+}
+
 /* RESPONSIVE */
 
 @media screen and (max-width: 992px) {
@@ -526,6 +564,15 @@ h2{
     }
     .container-pokeball{
         display: none;
+    }
+    /* FOOTER */
+    footer section {
+        display: flex;
+        flex-direction: column;
+        padding: 30px 0;
+    }
+    .social{
+        margin-top: 20px;
     }
 }
 @media screen and (max-width: 400px) {

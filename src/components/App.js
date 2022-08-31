@@ -8,6 +8,7 @@ import {
 import "../styles/style.css"
 // pages and sections
 import Header from "./sections/Header";
+import Footer from "./sections/Footer";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Pokemon from "./pages/Pokemon";
@@ -24,7 +25,7 @@ const App = () => (
         element={<Home/>}
       />
     </Routes>
-    {/* <Footer/> */}
+    <Footer/>
   </BrowserRouter>
 )
 
