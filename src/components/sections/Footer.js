@@ -6,6 +6,7 @@ import github from "../../assets/images/github.svg"
 
 const Footer = () => (
      <footer>
+        {/* <hr/> */}
         <section>
             <div className="content-logo-footer">
                 <a href="/" className="f-logo">

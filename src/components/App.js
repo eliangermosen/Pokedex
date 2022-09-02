@@ -8,10 +8,11 @@ import {
 import "../styles/style.css"
 // pages and sections
 import Header from "./sections/Header";
-import Footer from "./sections/Footer";
+// import Footer from "./sections/Footer";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Pokemon from "./pages/Pokemon";
+import GitHub from "./sections/GitHub";
 
 const App = () => (
   <BrowserRouter>
@@ -25,7 +26,8 @@ const App = () => (
         element={<Home/>}
       />
     </Routes>
-    <Footer/>
+    <GitHub/>
+    {/* <Footer/> */}
   </BrowserRouter>
 )
 

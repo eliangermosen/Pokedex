@@ -40,7 +40,7 @@ a {
     background-color: var(--backgroung);
     display: grid;
     /* min-height: 100vh; */
-    min-height: 85vh;
+    min-height: 84.5vh;
     grid-template-rows: auto 1fr auto;
 }
 
@@ -452,6 +452,23 @@ footer .social{
 
 .connect{
     font-size: 22px;
+}
+
+/* hr{
+    height: 4px;
+    background-color: var(--blue);
+    border: none;
+} */
+
+.container-git {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.container-git img {
+    width: 40px;
+    cursor: pointer;
 }
 
 /* RESPONSIVE */
