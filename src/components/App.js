@@ -12,7 +12,7 @@ import Header from "./sections/Header";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Pokemon from "./pages/Pokemon";
-import GitHub from "./sections/GitHub";
+// import GitHub from "./sections/GitHub";
 
 const App = () => (
   <BrowserRouter>
@@ -26,7 +26,7 @@ const App = () => (
         element={<Home/>}
       />
     </Routes>
-    <GitHub/>
+    {/* <GitHub/> */}
     {/* <Footer/> */}
   </BrowserRouter>
 )
