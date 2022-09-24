@@ -2,6 +2,12 @@
 
 const pokemonCard = ({number,name,avatar}) => {
 
+    const handleCard = (name) => {
+        // e.preventDefault();
+        console.log(name);
+        window.location.href=`/pokemon/${name}`;
+    };
+
     const capitalizeFirstLetter = (name) => {
         // converting first letter to uppercase
         return name.charAt(0).toUpperCase() + name.slice(1);
@@ -9,7 +15,7 @@ const pokemonCard = ({number,name,avatar}) => {
 
     return(
         // <section className="container-card">
-            <article className="content-card">
+            <article className="content-card" onClick={()=>handleCard(name)}>
                 <figure className="fig-card">
                     <img src={avatar} alt={name} className="img-card" />
                 </figure>

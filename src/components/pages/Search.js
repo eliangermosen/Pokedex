@@ -50,10 +50,6 @@ const Search = () => {
         setPokeApi(pokeApi);
     };
 
-    const handleSearch = (e,) => {
-        e.preventDefault();
-    };
-
     return(
         <section className="container search-cont">
             <SearchBar/>
