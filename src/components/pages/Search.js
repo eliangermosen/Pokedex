@@ -50,9 +50,15 @@ const Search = () => {
         setPokeApi(pokeApi);
     };
 
+    const handleSearch = (search) => {
+        console.log("EN EL EVENTO handleSearch DE SEARCH.JS");
+        console.log(search);
+        //pokeApi = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=2000";
+    };
+
     return(
         <section className="container search-cont">
-            <SearchBar/>
+            <SearchBar lookFor={handleSearch}/>
             <section className="container-card">
                 {pokemons.length === 0 ? (
                     <h3>Cargando...</h3>

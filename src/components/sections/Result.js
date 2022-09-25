@@ -1,5 +1,3 @@
-import pikachu from "../../assets/images/pikachu-home.svg"
-
 const Result = ({name, avatar, weight,height, types,abilities,stats}) => {
 
     // console.log(name, avatar, weight, height, types, abilities, stats);
