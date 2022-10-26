@@ -137,7 +137,7 @@ h2{
 /* SEARCH */
 
 .container-searchbar{
-    margin-top: 50px;
+    margin-top: 20px;
     /* margin-left: 50px; */
     /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -464,12 +464,17 @@ footer .social{
 .container-git {
     position: fixed;
     bottom: 20px;
-    right: 20px;
+    right: 6px;
 }
 
 .container-git img {
     width: 40px;
     cursor: pointer;
+    transition: all 0.4s ease-in;
+}
+.container-git img:hover {
+    width: 70px;
+    /* transform: rotate(360deg); */
 }
 
 /* RESPONSIVE */
@@ -521,9 +526,12 @@ footer .social{
         width: 330px;
         height: auto;
     }
+    .box1-home, .box1-poke{
+        margin-bottom: 40px;
+    }
     /* SEARCH */
     .container-searchbar {
-        margin: 0 30px;
+        margin: 30px 30px 0;
     }
     .container-pokeball img{
         width: 100px;
@@ -547,7 +555,8 @@ footer .social{
         grid-gap: 104px;
     }
     .box2-home img, .box2-poke img{
-        width: 304px;
+        /* width: 304px; */
+        width: 230px;
         height: auto;
     }
     .p-welcome {
@@ -571,7 +580,8 @@ footer .social{
 @media screen and (max-width: 500px) {
     /* HOME */
     .content-home::before, .content-poke::before {
-        clip-path: polygon(0 16%, 100% 16%, 100% 70%, 0% 78%);
+        /* clip-path: polygon(0 16%, 100% 16%, 100% 70%, 0% 78%); */
+        clip-path: polygon(0 16%, 100% 16%, 100% 50%, 0% 62%);
     }
     .box2-home img, .box2-poke img{
         margin-top: 48px;
@@ -603,7 +613,8 @@ footer .social{
         font-size: 18px;
     }
     .content-home::before, .content-poke::before {
-        clip-path: polygon(0 16%, 100% 16%, 100% 70%, 0% 80%);
+        /* clip-path: polygon(0 16%, 100% 16%, 100% 70%, 0% 80%); */
+        clip-path: polygon(0 16%, 100% 16%, 100% 50%, 0% 62%);
     }
     /* SEARCH */
     .search-input {
@@ -614,11 +625,13 @@ footer .social{
 @media screen and (max-width: 376px){
     /* HOME */
     .box2-home img, .box2-poke img{
-        width: 290px;
+        /* width: 290px; */
+        width: 210px;
         height: auto;
     }
     .content-home::before, .content-poke::before {
-        clip-path: polygon(0 16%, 100% 16%, 100% 80%, 0% 100%);
+        /* clip-path: polygon(0 16%, 100% 16%, 100% 80%, 0% 100%); */
+        clip-path: polygon(0 16%, 100% 16%, 100% 60%, 0% 80%);
     }
 }
 

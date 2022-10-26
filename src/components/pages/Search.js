@@ -101,9 +101,10 @@ const Search = () => {
             <SearchBar lookFor={handleSearch}/>
             <section className="container-card">
                 {pokemons.length === 0 ? (
-                    <h3>Cargando...</h3>
+                    <Loader/>
                     ) : (
                         pokemons
+                        //.filter((el,index) => pokemons.indexOf(el) === index)
                         .sort((a, b) => a.id - b.id)
                         .map((el) => (
                         <PokeCard key={el.id} number={el.id} name={el.name} avatar={el.avatar}/>
