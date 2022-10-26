@@ -103,7 +103,9 @@ const Search = () => {
                 {pokemons.length === 0 ? (
                     <h3>Cargando...</h3>
                     ) : (
-                        pokemons.map((el) => (
+                        pokemons
+                        .sort((a, b) => a.id - b.id)
+                        .map((el) => (
                         <PokeCard key={el.id} number={el.id} name={el.name} avatar={el.avatar}/>
                         ))
                     )
