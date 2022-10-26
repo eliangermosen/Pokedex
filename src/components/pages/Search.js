@@ -11,7 +11,7 @@ const Search = () => {
     // let {data, isPending, error} = useFetch(pokeApi);
     let {data} = useFetch(pokeApi);
 
-    console.log(data);
+    // console.log(data);
     // console.log(isPending);
     // console.log(error);
 
@@ -52,9 +52,45 @@ const Search = () => {
 
     const handleSearch = (search) => {
         console.log("EN EL EVENTO handleSearch DE SEARCH.JS");
-        console.log(search);
-        //pokeApi = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=2000";
+        if(search){
+            console.log(search);
+            //pokeApi = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=2000";
+            setPokeApi("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=2000");
+            setPokemons([]);//para que me limpie los pasados pokemones paginados
+            console.log(pokeApi);
+            console.log(pokemons);
+            console.log(data);
+            console.log("FILTER");
+            //console.log(searchFilter(data, search));
+            //let dataFiltrada = [];
+            const dataFiltrada = searchFilter(data, search);
+            console.log(dataFiltrada);
+            dataFiltrada.forEach(async(el)=>{
+                let res = await fetch(el.url),
+                    json = await res.json();
+
+                let pokemon = {
+                    id: json.id,
+                    name: json.name,
+                    // avatar: json.sprites.front_default
+                    avatar: json.sprites.other.dream_world.front_default
+                };
+                /* console.log(`id pokemon filtrado ${pokemon.id}`);
+                console.log(`name pokemon filtrado ${pokemon.name}`);
+                console.log(`avatar pokemon filtrado ${pokemon.avatar}`); */
+                setPokemons((dataFiltrada) => [...dataFiltrada, pokemon]);
+            });
+            console.log(pokemons);
+        };
+        ////pokeApi = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=2000";
     };
+
+    const searchFilter = (arr, query) => {
+        // si pasa pokemons[]
+        //return arr?.filter((el) => el.name.toLowerCase().includes(query.toLowerCase()));
+        // si pasa data
+        return arr.results?.filter((el) => el.name.toLowerCase().includes(query.toLowerCase()));
+    }
 
     return(
         <section className="container search-cont">
