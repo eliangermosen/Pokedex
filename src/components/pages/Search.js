@@ -1,6 +1,7 @@
 import SearchBar from "../sections/SearchBar";
 import PokeCard from "../cards/pokemonCard";
 // import Pagination from "../sections/Pagination";
+import Loader from "./Loader";
 import { useFetch } from '../../hooks/useFetch';
 import { useState, useEffect } from 'react';
 
@@ -9,7 +10,7 @@ const Search = () => {
     let [pokeApi, setPokeApi] = useState("https://pokeapi.co/api/v2/pokemon/");
     
     // let {data, isPending, error} = useFetch(pokeApi);
-    let {data} = useFetch(pokeApi);
+    let {data, isPending} = useFetch(pokeApi);
 
     // console.log(data);
     // console.log(isPending);
@@ -30,7 +31,6 @@ const Search = () => {
                 let pokemon = {
                     id: json.id,
                     name: json.name,
-                    // avatar: json.sprites.front_default
                     avatar: json.sprites.other.dream_world.front_default
                 };
 
@@ -72,7 +72,6 @@ const Search = () => {
                 let pokemon = {
                     id: json.id,
                     name: json.name,
-                    // avatar: json.sprites.front_default
                     avatar: json.sprites.other.dream_world.front_default
                 };
                 /* console.log(`id pokemon filtrado ${pokemon.id}`);
@@ -92,8 +91,13 @@ const Search = () => {
         return arr.results?.filter((el) => el.name.toLowerCase().includes(query.toLowerCase()));
     }
 
+    // if(isPending){
+    //     return(<Loader/>)
+    // }
+
     return(
         <section className="container search-cont">
+            {isPending && <Loader/>}
             <SearchBar lookFor={handleSearch}/>
             <section className="container-card">
                 {pokemons.length === 0 ? (
