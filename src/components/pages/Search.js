@@ -88,7 +88,11 @@ const Search = () => {
             console.log("FILTER");
             //console.log(searchFilter(data, search));
             //let dataFiltrada = [];
-            setDataFiltrada(searchFilter(data, search));
+            let allFilter = searchFilter(data, search);
+            //console.log(allFilter);
+            let smallFilter = allFilter.slice(0,20);//filtrando del 0 al 19 ya que slice no incluye el final
+            //console.log(smallFilter);
+            setDataFiltrada(smallFilter);
             console.log(dataFiltrada);
         };
         ////pokeApi = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=2000";
