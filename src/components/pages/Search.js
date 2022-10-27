@@ -8,6 +8,7 @@ import { useState, useEffect } from 'react';
 const Search = () => {
     // let pokeApi = "https://pokeapi.co/api/v2/pokemon/";
     let [pokeApi, setPokeApi] = useState("https://pokeapi.co/api/v2/pokemon/");
+    //let [search, setSearch] = useState(false);
     
     // let {data, isPending, error} = useFetch(pokeApi);
     let {data, isPending} = useFetch(pokeApi);
@@ -17,29 +18,53 @@ const Search = () => {
     // console.log(error);
 
     const [pokemons, setPokemons] = useState([]);
+    const [dataFiltrada, setDataFiltrada] = useState([]);
 
     useEffect(() => {
+        if(dataFiltrada.length === 0){
+            const getPokemons = async (data) => {
+    
+                data?.results.forEach(async(el)=>{
+                    let res = await fetch(el.url),
+                        json = await res.json();
+    
+                    // console.log(json);
+    
+                    let pokemon = {
+                        id: json.id,
+                        name: json.name,
+                        avatar: json.sprites.other.dream_world.front_default
+                    };
+    
+                    setPokemons((pokemons) => [...pokemons, pokemon]);
+                });
+            };
+            
+            getPokemons(data);
+        }
+        else{
+            setPokemons([]);
+            const getFilterPokemons = async () => {
+                dataFiltrada.forEach(async(el)=>{
+                    let res = await fetch(el.url),
+                        json = await res.json();
 
-        const getPokemons = async (data) => {
-
-            data?.results.forEach(async(el)=>{
-                let res = await fetch(el.url),
-                    json = await res.json();
-
-                // console.log(json);
-
-                let pokemon = {
-                    id: json.id,
-                    name: json.name,
-                    avatar: json.sprites.other.dream_world.front_default
-                };
-
-                setPokemons((pokemons) => [...pokemons, pokemon]);
-            });
-        };
-        
-        getPokemons(data);
-    }, [data]);//como solo quiero hacer la peticion una sola vez dejo el arreglo vacio
+                    let pokemon = {
+                        id: json.id,
+                        name: json.name,
+                        avatar: json.sprites.other.dream_world.front_default
+                    };
+                    /* console.log(`id pokemon filtrado ${pokemon.id}`);
+                    console.log(`name pokemon filtrado ${pokemon.name}`);
+                    console.log(`avatar pokemon filtrado ${pokemon.avatar}`); */
+                    setPokemons((dataFiltrada) => [...dataFiltrada, pokemon]);
+                });
+                //console.log(pokemons);
+                console.log(dataFiltrada);
+            }
+            getFilterPokemons();
+        }
+    }, [data, dataFiltrada]);//como solo quiero hacer la peticion una sola vez dejo el arreglo vacio
 
     const handleLinks = (e, url) => {
         e.preventDefault();
@@ -63,23 +88,8 @@ const Search = () => {
             console.log("FILTER");
             //console.log(searchFilter(data, search));
             //let dataFiltrada = [];
-            const dataFiltrada = searchFilter(data, search);
+            setDataFiltrada(searchFilter(data, search));
             console.log(dataFiltrada);
-            dataFiltrada.forEach(async(el)=>{
-                let res = await fetch(el.url),
-                    json = await res.json();
-
-                let pokemon = {
-                    id: json.id,
-                    name: json.name,
-                    avatar: json.sprites.other.dream_world.front_default
-                };
-                /* console.log(`id pokemon filtrado ${pokemon.id}`);
-                console.log(`name pokemon filtrado ${pokemon.name}`);
-                console.log(`avatar pokemon filtrado ${pokemon.avatar}`); */
-                setPokemons((dataFiltrada) => [...dataFiltrada, pokemon]);
-            });
-            console.log(pokemons);
         };
         ////pokeApi = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=2000";
     };
@@ -106,8 +116,8 @@ const Search = () => {
                         pokemons
                         //.filter((el,index) => pokemons.indexOf(el) === index)
                         .sort((a, b) => a.id - b.id)
-                        .map((el) => (
-                        <PokeCard key={el.id} number={el.id} name={el.name} avatar={el.avatar}/>
+                        .map((el,index) => (
+                        <PokeCard key={index} number={el.id} name={el.name} avatar={el.avatar}/>
                         ))
                     )
                 }
