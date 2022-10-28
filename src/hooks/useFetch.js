@@ -24,20 +24,6 @@ export const useFetch = (pokeApi) => {
 
                 let dataJson = await res.json();
 
-                // data.results.forEach(async (el) => {
-                //     let res = await fetch(el.pokeApi),
-                //     json = await res.json();
-
-                //     // console.log(json);
-                //     let pokemon = {
-                //         id: json.id,
-                //         name: json.name,
-                //         avatar: json.sprites.front_default,
-                //     };
-                //     // funcion que actualiza el estado
-                //     setPokemons((pokemons) => [...pokemons, pokemon]);
-                // });
-
                 setIsPending(false);
 
                 setData(dataJson);

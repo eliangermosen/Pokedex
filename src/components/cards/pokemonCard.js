@@ -1,9 +1,6 @@
-// import pikachu from "../../assets/images/pikachu-card.svg"
-
 const pokemonCard = ({number,name,avatar}) => {
 
     const handleCard = (name) => {
-        // e.preventDefault();
         console.log(name);
         window.location.href=`/pokemon/${name}`;
     };
@@ -16,14 +13,6 @@ const pokemonCard = ({number,name,avatar}) => {
     return(
     <article className="content-card" onClick={()=>handleCard(name)}>
         <figure className="fig-card">
-            {/* {
-                !avatar ? (
-                    <img src={avatarOpt2} alt={name} className="img-card" />
-                    ) : (
-                        <img src={avatar} alt={name} className="img-card" />
-                    )
-            } */}
-            {/* <img src={!avatar ? avatarOpt2 : avatar} alt={name} className="img-card" /> */}
             <img src={avatar} alt={name} className="img-card" />
             </figure>
             <div className="inf-card">

@@ -1,7 +1,5 @@
 const Result = ({name, avatar, weight,height, types,abilities,stats}) => {
 
-    // console.log(name, avatar, weight, height, types, abilities, stats);
-
     const capitalizeFirstLetter = (name) => {
         // converting first letter to uppercase
         return name.charAt(0).toUpperCase() + name.slice(1);

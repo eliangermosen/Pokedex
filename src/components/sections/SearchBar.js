@@ -2,14 +2,11 @@ import { useState } from "react";
 import pokeball from "../../assets/images/pokeball.svg"
 
 const SearchBar = ({lookFor}) => {
-    // https://pokeapi.co/api/v2/pokemon/?offset=0&limit=2000
 
     const [search, setSearch] = useState('');
 
     const handleChange = (e) => {
-        // console.log(e.target.value);
         setSearch(e.target.value);
-        // console.log(search);
     };
 
     return(

@@ -15,8 +15,6 @@ const Pokemon = () => {
     
     console.log(data);
     console.log(error);
-    // console.log(error?.err);
-    // console.log(error?.err.err);
 
     const [loading, setLoading] = useState(false);
     const [err, setErr] = useState(error?.err.err);
