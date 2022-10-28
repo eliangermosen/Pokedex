@@ -8,13 +8,9 @@ import Message from "./Message";
 const Pokemon = () => {
     
     let {pokemon} = useParams();
-    console.log(pokemon);
 
     let pokeApi = `https://pokeapi.co/api/v2/pokemon/${pokemon}`;
     let {data,error} = useFetch(pokeApi);
-    
-    console.log(data);
-    console.log(error);
 
     const [loading, setLoading] = useState(false);
     const [err, setErr] = useState(error?.err.err);

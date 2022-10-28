@@ -45,7 +45,6 @@ const Search = () => {
                     };
                     setPokemons((dataFiltrada) => [...dataFiltrada, pokemon]);
                 });
-                console.log(dataFiltrada);
             }
             getFilterPokemons();
         }
@@ -54,9 +53,7 @@ const Search = () => {
     const handleLinks = (e, url) => {
         e.preventDefault();
         setPokemons([]);//para que me limpie los pasados pokemones paginados
-        console.log(url);
         pokeApi = url;
-        console.log(pokeApi);
         setPokeApi(pokeApi);
     };
 
@@ -64,14 +61,9 @@ const Search = () => {
         if(search){
             setPokeApi("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=2000");
             setPokemons([]);//para que me limpie los pasados pokemones paginados
-            console.log(pokeApi);
-            console.log(pokemons);
-            console.log(data);
-            console.log("FILTER");
             let allFilter = searchFilter(data, search);
             let smallFilter = allFilter.slice(0,20);//filtrando del 0 al 19 ya que slice no incluye el final
             setDataFiltrada(smallFilter);
-            console.log(dataFiltrada);
         };
     };
 

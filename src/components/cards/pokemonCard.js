@@ -1,7 +1,6 @@
 const pokemonCard = ({number,name,avatar}) => {
 
     const handleCard = (name) => {
-        console.log(name);
         window.location.href=`/pokemon/${name}`;
     };
 
