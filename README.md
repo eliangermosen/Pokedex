@@ -23,4 +23,4 @@ I started this project doing the UI Design in figma, as you can see in the image
 
 > Design just changed a little in the project as is normal in develop.😁
 
-If you want to see and test the project go to the live demo deployed with Vercel. [CLICK HERE](https://github.com/Elianmtg/Pokedex)
+If you want to see and test the project go to the live demo deployed with Vercel. [CLICK HERE](https://pokedex-elian.vercel.app/)
